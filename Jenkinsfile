@@ -1,14 +1,15 @@
 pipeline {
-    agent {label 'agent-1'}
-    tools {
-        maven 'maven3.9'
+    agent any 
+    
+    tools 
+        maven 'maven3.6'
         jdk 'jdk17'
     }
 
     stages {
         stage('git checkout') {
             steps {
-               git branch: 'main',url: 'https://github.com/devopswithkrishnareddy/Boardgame.git'
+               git branch: 'main',https://github.com/Najimoon/Boardgame.git'
             }
         }
         stage('compile') {
