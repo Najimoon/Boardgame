@@ -10,7 +10,6 @@ pipeline {
         stage('git checkout') {
             steps {
                git branch: 'main',https://github.com/Najimoon/Boardgame.git'
-            }
         }
         stage('compile') {
             steps {
